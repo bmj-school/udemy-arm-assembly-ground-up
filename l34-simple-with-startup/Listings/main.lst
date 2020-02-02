@@ -1,0 +1,58 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ; Starting project
+    2 00000000         
+    3 00000000                 AREA             SimpleProject, CODE, READONLY
+    4 00000000                 ENTRY
+    5 00000000                 EXPORT           __main
+    6 00000000         
+    7 00000000         __main
+    8 00000000 F241 2534       MOV              R5,#0x1234
+    9 00000004 F241 2334       MOV              R3,#0x1234
+   10 00000008 EB05 0603       ADD              R6,R5,R3
+   11 0000000C         
+   12 0000000C E7FE    STOP    B                STOP
+   13 0000000E                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=
+interwork --depend=.\objects\main.d -o.\objects\main.o -I.\RTE\_F446 -IC:\Users
+\start\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include -IC:\Users\st
+art\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\S
+TM32F4xx\Include --predefine="__EVAL SETA 1" --predefine="__MICROLIB SETA 1" --
+predefine="__UVISION_VERSION SETA 529" --predefine="_RTE_ SETA 1" --predefine="
+STM32F446xx SETA 1" --list=.\listings\main.lst main.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+STOP 0000000C
+
+Symbol: STOP
+   Definitions
+      At line 12 in file main.s
+   Uses
+      At line 12 in file main.s
+Comment: STOP used once
+SimpleProject 00000000
+
+Symbol: SimpleProject
+   Definitions
+      At line 3 in file main.s
+   Uses
+      None
+Comment: SimpleProject unused
+__main 00000000
+
+Symbol: __main
+   Definitions
+      At line 7 in file main.s
+   Uses
+      At line 5 in file main.s
+Comment: __main used once
+3 symbols
+339 symbols in table
